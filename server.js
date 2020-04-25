@@ -53,7 +53,7 @@ mongoose.Promise = global.Promise; // fix for "DeprecationWarning: Mongoose: mpr
 
 // database connection
 // ================================================================================================================================================//
-mongoose.connect('mongodb://localhost:27017/store', { poolSize: 20, keepAlive: 300000, useMongoClient: true });
+mongoose.connect('mongodb://fitness:fitness@ec2-34-216-156-161.us-west-2.compute.amazonaws.com:27017/fitness-db', { poolSize: 20, keepAlive: 300000, useMongoClient: true });
 mongoose
     .connection
     .once('connected', () => console.log('Connected to database'));
